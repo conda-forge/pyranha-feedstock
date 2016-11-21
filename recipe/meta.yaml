@@ -30,7 +30,6 @@ requirements:
     - boost     1.62.*
     - bzip2     1.0.*
     - zlib      1.2.*
-    - piranha   {{ version }}
     - python
     - mpmath
     - numpy
