@@ -32,11 +32,10 @@ requirements:
     - zlib      1.2.*
     - piranha   {{ version }}
     - python
-
-test:
-  requires:
     - mpmath
     - numpy
+
+test:
   imports:
     - pyranha
   commands:
