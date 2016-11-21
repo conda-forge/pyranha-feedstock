@@ -13,6 +13,6 @@ cmake \
     -DBUILD_PYRANHA=yes \
     ..
 
-make
+make -j2
 make install
 
