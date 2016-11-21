@@ -10,8 +10,8 @@ source:
   sha256: 649f91ceee56446f903551f0665b8807b833d91fd9622c412eadc95d353ac8e6
 
 build:
-  number: 0
-  skip: true        # [win or py3k]
+  number: 1
+  skip: true        # [win]
 
 requirements:
   build:
@@ -30,13 +30,11 @@ requirements:
     - boost     1.62.*
     - bzip2     1.0.*
     - zlib      1.2.*
-    - piranha   {{ version }}
     - python
-
-test:
-  requires:
     - mpmath
     - numpy
+
+test:
   imports:
     - pyranha
   commands:
