@@ -22,7 +22,7 @@ requirements:
     - boost     1.63.*
     - bzip2     1.0.*
     - zlib      1.2.*
-    - piranha   {{ version }}
+    - msgpack-c 2.*
     - python
   run:
     - gmp >=5.0.1,<7
