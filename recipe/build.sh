@@ -9,6 +9,8 @@ cmake \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DPIRANHA_WITH_BZIP2=yes \
     -DPIRANHA_WITH_ZLIB=yes  \
+    -DPIRANHA_WITH_MSGPACK=yes \
+    -DPIRANHA_INSTALL_HEADERS=no \
     -DBUILD_TESTS=no \
     -DBUILD_PYRANHA=yes \
     ..
