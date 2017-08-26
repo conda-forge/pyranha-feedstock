@@ -15,6 +15,5 @@ cmake \
     -DBUILD_PYRANHA=yes \
     ..
 
-make -j2
-make install
+make install -j${CPU_COUNT}
 
