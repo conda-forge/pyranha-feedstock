@@ -10,26 +10,28 @@ source:
   sha256: ab5782696a40888726c752c06a4b60783eda28ee4736b56083b96a53fd9a6230
 
 build:
-  number: 0
+  number: 1
   skip: true        # [win or py34]
 
 requirements:
   build:
-    - toolchain
     - cmake
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - gmp
+    - mpfr
+    - boost
+    - bzip2
+    - zlib
     - msgpack-c 2.*
     - python
   run:
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
+    - gmp
+    - mpfr
+    - boost
+    - bzip2
+    - zlib
     - python
     - mpmath
     - numpy
