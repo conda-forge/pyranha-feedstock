@@ -15,21 +15,22 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
     - cmake
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
+  host:
+    - gmp
+    - mpfr
+    - boost
+    - bzip2
+    - zlib
     - msgpack-c 2.*
     - python
   run:
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
+    - gmp
+    - mpfr
+    - boost
+    - bzip2
+    - zlib
     - python
     - mpmath
     - numpy
