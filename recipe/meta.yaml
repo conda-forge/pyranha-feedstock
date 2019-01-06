@@ -23,7 +23,7 @@ requirements:
     - boost
     - bzip2
     - zlib
-    - msgpack-c 2.*
+    - msgpack-c
     - python
   run:
     - gmp
