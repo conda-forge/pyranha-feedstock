@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 394e7db2b..3b170fdfd 100644
+index 394e7db2b..61ebabace 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -91,7 +91,7 @@ IF(BUILD_TESTS)
@@ -7,12 +7,12 @@ index 394e7db2b..3b170fdfd 100644
  ENDIF()
  IF(BUILD_PYRANHA)
 -	SET(REQUIRED_BOOST_LIBS ${REQUIRED_BOOST_LIBS} python)
-+	SET(REQUIRED_BOOST_LIBS ${REQUIRED_BOOST_LIBS} python3)
++	SET(REQUIRED_BOOST_LIBS ${REQUIRED_BOOST_LIBS} "python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}")
  ENDIF()
  MESSAGE(STATUS "Required Boost libraries: ${REQUIRED_BOOST_LIBS}")
  FIND_PACKAGE(Boost 1.48.0 REQUIRED COMPONENTS "${REQUIRED_BOOST_LIBS}")
 diff --git a/pyranha/CMakeLists.txt b/pyranha/CMakeLists.txt
-index 909a4dd3e..b268a425c 100644
+index 909a4dd3e..2b201f803 100644
 --- a/pyranha/CMakeLists.txt
 +++ b/pyranha/CMakeLists.txt
 @@ -75,7 +75,7 @@ YACMA_PYTHON_MODULE(_core SHARED
@@ -20,7 +20,7 @@ index 909a4dd3e..b268a425c 100644
  
  # The module needs Boost.Python and the Python libs, plus the mandatory libraries.
 -target_link_libraries(_core ${MANDATORY_LIBRARIES} ${Boost_PYTHON_LIBRARY} ${PYTHON_LIBRARIES})
-+target_link_libraries(_core ${MANDATORY_LIBRARIES} ${Boost_PYTHON3_LIBRARY} ${PYTHON_LIBRARIES})
++target_link_libraries(_core ${MANDATORY_LIBRARIES} ${Boost_PYTHON${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_LIBRARY} ${PYTHON_LIBRARIES})
  install(TARGETS _core
  	RUNTIME DESTINATION ${PYRANHA_INSTALL_PATH}
  	LIBRARY DESTINATION ${PYRANHA_INSTALL_PATH}
