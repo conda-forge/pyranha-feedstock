@@ -8,6 +8,8 @@ source:
   fn: piranha-{{ version }}.tar.gz
   url: https://github.com/bluescarni/piranha/archive/v{{ version }}.tar.gz
   sha256: ab5782696a40888726c752c06a4b60783eda28ee4736b56083b96a53fd9a6230
+  patches:
+    - boost_python3.diff
 
 build:
   number: 1
