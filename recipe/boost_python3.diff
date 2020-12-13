@@ -21,7 +21,7 @@ index 909a4dd3e..dfe24331f 100644
  # The module needs Boost.Python and the Python libs, plus the mandatory libraries.
 -target_link_libraries(_core ${MANDATORY_LIBRARIES} ${Boost_PYTHON_LIBRARY} ${PYTHON_LIBRARIES})
 +target_link_libraries(_core ${MANDATORY_LIBRARIES} ${Boost_PYTHON${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR}_LIBRARY})
-+if(APPLE AND ${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
++if(APPLE)
 +	# On OSX + Clang this link flag is apparently necessary in order to avoid
 +	# undefined references to symbols defined in the Python library. See also:
 +	# https://github.com/potassco/clingo/issues/79
