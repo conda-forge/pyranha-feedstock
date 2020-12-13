@@ -8,28 +8,30 @@ source:
   fn: piranha-{{ version }}.tar.gz
   url: https://github.com/bluescarni/piranha/archive/v{{ version }}.tar.gz
   sha256: ab5782696a40888726c752c06a4b60783eda28ee4736b56083b96a53fd9a6230
+  patches:
+    - boost_python3.diff
 
 build:
-  number: 0
+  number: 1
   skip: true        # [win or py34]
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
-    - msgpack-c 2.*
+  host:
+    - gmp
+    - mpfr
+    - boost
+    - boost-cpp
+    - bzip2
+    - zlib
+    - msgpack-c
     - python
   run:
-    - gmp >=5.0.1,<7
-    - mpfr 3.*
-    - boost     1.63.*
-    - bzip2     1.0.*
-    - zlib      1.2.*
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
+    - {{ pin_compatible('boost', max_pin='x.x') }}
     - python
     - mpmath
     - numpy

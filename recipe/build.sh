@@ -13,6 +13,7 @@ cmake \
     -DPIRANHA_INSTALL_HEADERS=no \
     -DBUILD_TESTS=no \
     -DBUILD_PYRANHA=yes \
+    -DBoost_NO_BOOST_CMAKE=yes \
     ..
 
 make -j2
