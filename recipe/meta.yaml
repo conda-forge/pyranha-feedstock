@@ -12,14 +12,15 @@ source:
     - boost_python3.diff
 
 build:
-  number: 3
-  skip: true        # [win or py34]
+  number: 4
+  skip: true        # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [unix]
   host:
     - gmp
     - mpfr
@@ -44,7 +45,7 @@ test:
 
 about:
   home: https://github.com/bluescarni/piranha
-  license: GPL v3 and LGPL v3
+  license: GPL-3.0-or-later OR LGPL-3.0-or-later
   license_file: COPYING.lgpl3
   summary: 'Python bindings to Piranha computer algebra system.'
 
