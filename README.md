@@ -3,7 +3,7 @@ About pyranha
 
 Home: https://github.com/bluescarni/piranha
 
-Package license: GPL v3 and LGPL v3
+Package license: GPL-3.0-or-later OR LGPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyranha-feedstock/blob/main/LICENSE.txt)
 
