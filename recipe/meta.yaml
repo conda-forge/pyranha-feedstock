@@ -28,7 +28,7 @@ requirements:
     - libboost-devel
     - bzip2
     - zlib
-    - msgpack-c
+    - msgpack-cxx
     - python
   run:
     - python
