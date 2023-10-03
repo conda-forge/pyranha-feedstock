@@ -28,6 +28,9 @@ requirements:
     - libboost-devel
     - bzip2
     - zlib
+    # upstream is confused; says it wants msgpack-c,
+    # but includes the headers from msgpack-cxx
+    - msgpack-c
     - msgpack-cxx
     - python
   run:
